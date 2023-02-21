@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+      .casio {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: rgb(235, 240, 240);
+        width: 13.5%;
+        margin-left: 40%;
+      }
+      .btn_plus {
+        text-align: start;
+        padding: 7px 2px;
+        margin: 0;
+      }
+      .btn {
+        padding: 8px 2px;
+        text-align: start;
+      }
+      .ts {
+        padding: 2px;
+        border: solid 1px black;
+        border-radius: 2px;
+        background-color: #ffffff;
+        width: 169px;
+        height: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="casio">
+      <input id="rank1" type="text" />
+      <p class="btn_plus">+</p>
+      <input id="rank2" type="text" />
+      <div class="btn">
+        <button onclick="plus()">=</button>
+      </div>
+      <p class="ts" id="kq"></p>
+    </div>
+  </body>
+</html>
+<script>
+  const plus = () => {
+    let a = document.getElementById("rank1").value;
+    let b = document.getElementById("rank2").value;
+    document.getElementById("kq").innerHTML = parseInt(a) + parseInt(b);
+  };
+</script>
